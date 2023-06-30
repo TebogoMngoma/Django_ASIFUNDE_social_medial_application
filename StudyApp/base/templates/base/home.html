@@ -1,0 +1,29 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<style>
+    .home-container {
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+    }
+</style>
+
+<div class="home-container">
+    <!-- this is the side bar where we can view topics -->
+    <div>
+       {% include 'base/topics_component.html' %}
+    </div>
+    <!-- this is were we can see rooms/main dashboard -->
+    <div>
+        <h5>{{room_count}} rooms available</h5>
+        <a href="{% url 'create-room' %}">Create Room</a>
+        {% include 'base/main_component.html' %}
+
+    </div>
+    <div>
+        {% include 'base/activity_component.html' %}
+    </div>
+</div>
+
+
+{% endblock content %}
