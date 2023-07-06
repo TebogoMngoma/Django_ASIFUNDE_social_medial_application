@@ -1,6 +1,6 @@
 <div align="center">
 
-# StudyBuddy
+# Asifunde
 </div>
 
 ### Cloning the repository
